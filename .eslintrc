@@ -1,0 +1,13 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
+  "env": {
+    "mocha": true
+  },
+  "plugins": [
+      "flowtype"
+  ],
+  "rules": {
+    "no-unused-expressions": 0
+  }
+}
