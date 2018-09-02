@@ -1,0 +1,32 @@
+{
+  "name": "express-api-starter",
+  "version": "1.0.0",
+  "description": "express api starer kit",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyhsa93/express-api-starter.git"
+  },
+  "keywords": [
+    "express",
+    "babel",
+    "eslint",
+    "jsdoc",
+    "mocha",
+    "chai",
+    "istanbul"
+  ],
+  "author": "kyhsa93",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyhsa93/express-api-starter/issues"
+  },
+  "homepage": "https://github.com/kyhsa93/express-api-starter#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

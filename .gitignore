@@ -1,6 +1,7 @@
 node_modules
-lib
+*lib
 .vscode
 .DS_Store
 docs
 coverage
+*.archive.*

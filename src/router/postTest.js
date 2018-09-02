@@ -5,8 +5,7 @@
  * @param {Object} request
  * @param {Object} response
  */
-const app = (request, response) => {
+export default (request, response) => {
   if (request.body) return response.status(200).send(request.body);
   return response.status(400);
 };
-export default app;
