@@ -1,3 +1,4 @@
+#!/bin/sh
 mkdir lib
 babel index.js -o lib/index.js
 babel src -d lib/src

@@ -1,3 +1,4 @@
+#!/bin/sh
 ./transpile.sh
 DATE=$(date +%Y%m%d%H%M%S)
 ARCHIVE=express.api.archive.$DATE
