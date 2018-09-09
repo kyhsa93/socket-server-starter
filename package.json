@@ -55,9 +55,9 @@
   "scripts": {
     "doc": "jsdoc -c jsdoc.conf",
     "lint": "eslint --fix index.js src",
-    "build": "./build.sh",
-    "trans": "./transpile.sh",
-    "test": "./test.sh",
+    "build": "sh ./build.sh",
+    "trans": "sh ./transpile.sh",
+    "test": "sh ./test.sh",
     "start": "nodemon --exec babel-node -- ./index.js"
   }
 }
