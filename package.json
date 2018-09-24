@@ -1,11 +1,11 @@
 {
-  "name": "express-api-starter",
+  "name": "socket-server-starter",
   "version": "1.0.0",
-  "description": "express api starer kit",
+  "description": "socket.io server starer kit",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kyhsa93/express-api-starter.git"
+    "url": "git+https://github.com/kyhsa93/socket-server-starter.git"
   },
   "keywords": [
     "express",
@@ -19,9 +19,9 @@
   "author": "kyhsa93",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kyhsa93/express-api-starter/issues"
+    "url": "https://github.com/kyhsa93/socket-server-starter/issues"
   },
-  "homepage": "https://github.com/kyhsa93/express-api-starter#readme",
+  "homepage": "https://github.com/kyhsa93/socket-server-starter#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "compression": "^1.7.2",
