@@ -1,9 +1,9 @@
 FROM ubuntu:16.04
 
 # copy source
-COPY ./lib /express-api
+COPY ./lib /socket-server
 
-WORKDIR /express-api
+WORKDIR /socket-server
 
 RUN apt-get update && \
     apt-get -y install tzdata curl nginx netcat-openbsd && \
@@ -18,5 +18,5 @@ RUN apt-get update && \
 
 EXPOSE 80
 
-# api start
+# server start
 ENTRYPOINT ./docker-entrypoint.sh

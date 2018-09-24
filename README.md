@@ -1,8 +1,8 @@
-# express api start
-api starter kit using express
+# socket server start
+socket server starter kit using socket.io
 
 ## Configuration
- * api config: [/config.json](/config.json)
+ * server config: [/config.json](/config.json)
  * babel config: [/.babelrc](/.babelrc)
  * eslint config: [/.eslintrc](/.babelrc)
 
@@ -13,7 +13,7 @@ api starter kit using express
     npm run lint     # lint using eslint, babel
     npm run trans    # transpile to common js
     npm test         # run test code
-    npm start        # start api with livereload
+    npm start        # start server with livereload
 ```
  * build: [/build.sh](build.sh)
  * test: [/test.sh](test.sh)
@@ -22,8 +22,8 @@ api starter kit using express
 ## using docker
 ```bash
     # if you want using docker, you have to run 'npm run trans' first
-    docker build -t express/express-api:<tag> .  # build docker image
-    docker run -d -p 80:80 express-api           # run docker container
+    docker build -t socket-server:<tag> .  # build docker image
+    docker run -d -p 80:80 socket-server           # run docker container
 ```
  * entyPoint: [/docker-entrypoint.sh](docker-entrypoint.sh)
  * Dockerfile: [/Dockerfile](Dockerfile)
