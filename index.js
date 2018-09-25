@@ -19,19 +19,40 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+const testNamespace = io.of('/test');
+
+testNamespace.on('connection', (socket) => {
+  console.log('user connected test namespace.');
+
+  // receive event named 'test chat'
+  socket.on('test chat', (msg) => {
+    console.log('test chat: ', msg);
+    testNamespace.emit('test chat', msg);
+  });
+
+  // user disconneted
+  socket.on('disconnect',  () => {
+    console.log('user disconnected from test namespace.');
+  })
+});
+
 // connection start
 io.on('connection', (socket) => {
   console.log('a user connected');
 
+  // broadcast message to everyone except for a certain socket
+  socket.broadcast.emit('server is connected.');
+
   // listen event named 'chat message'
   socket.on('chat message', (msg) => {
     // boradcast all connected user
+    console.log('chat message: ', msg);
     io.emit('chat message', msg);
   });
 
   // user disconnected
   socket.on('disconnect', () => {
-  console.log('user disconnected');
+    console.log('user disconnected');
   });
 });
 

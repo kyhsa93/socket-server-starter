@@ -25,16 +25,16 @@
     <script>
       $(() => {
         // connect socket.io
-        const socket = io();
+        const socket = io('/test');
         // submit form data
         $('form').submit(() => {
-          // send event named 'chat message' and data userself
-          socket.emit('chat message', $('#m').val());
+          // send event named 'test chat' and data userself
+          socket.emit('test chat', $('#m').val());
           $('#m').val('');
           return false;
         });
         // receive message to server
-        socket.on('chat message', (msg) => {
+        socket.on('test chat', (msg) => {
           $('#messages').append($('<li>').text(msg));
         });
       });
