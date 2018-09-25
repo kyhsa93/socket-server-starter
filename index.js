@@ -15,7 +15,7 @@ app.use(compression());
 app.disable('x-powered-by');
 
 // route
-app.get('/', (req, res) => {
+app.get('/socket', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
