@@ -7,3 +7,4 @@ cp package-lock.json lib/package-lock.json
 cp docker-entrypoint.sh lib/docker-entrypoint.sh
 cp nginx.conf lib/nginx.conf
 cp config.json lib/config.json
+cp index.html lib/index.html
