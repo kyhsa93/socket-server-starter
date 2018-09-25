@@ -23,16 +23,21 @@ const testNamespace = io.of('/test');
 
 testNamespace.on('connection', (socket) => {
   console.log('user connected test namespace.');
+  socket.broadcast.emit('test connect', 'someone is connected.');
 
   // receive event named 'test chat'
   socket.on('test chat', (msg) => {
     console.log('test chat: ', msg);
-    testNamespace.emit('test chat', msg);
+    // send my message
+    socket.emit('my message', 'you: ' + msg);
+    // broadcast my message to other user except me
+    socket.broadcast.emit('test chat', 'someone: ' + msg);
   });
 
   // user disconneted
   socket.on('disconnect',  () => {
     console.log('user disconnected from test namespace.');
+    socket.broadcast.emit('test disconnect', 'someone is disconnected.');
   })
 });
 
